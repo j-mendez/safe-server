@@ -2,4 +2,4 @@ FROM coppit/mumble-server
 
 COPY . .
 
-CMD [ "bash", "./start.sh" ]
+# CMD [ "bash", "./start.sh" ]

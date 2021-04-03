@@ -1,6 +1,6 @@
-# cozone-server
+# safe-server
 
-encrypted chat server
+encrypted murmur voice
 
 ## Getting Started
 
