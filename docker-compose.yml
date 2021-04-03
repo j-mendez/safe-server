@@ -1,0 +1,11 @@
+version: "3"
+services:
+  murmur:
+    build: .
+    ports:
+      - "64738:64738"
+    volumes:
+      - ./path/to/config/mumble-server:/path/to/config/mumble-server
+      - ./data/:/data
+volumes:
+  data: {}
