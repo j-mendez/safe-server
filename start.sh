@@ -10,7 +10,11 @@ fi
 
 echo Starting mumble-server service
 sed -i 's/^INIFILE=.*/INIFILE=\/data\/mumble-server.ini/' /etc/init.d/mumble-server
+
 service mumble-server start
+
+echo Setting SuperUser
+sudo murmurd -supw admin
 
 while true
 do

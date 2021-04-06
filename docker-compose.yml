@@ -1,11 +1,17 @@
-version: "3"
+version: '3'
+
 services:
   murmur:
-    build: .
+    image: goofball222/murmur
+    container_name: murmur
     ports:
-      - "64738:64738"
+      - 64738:64738
+      - 64738:64738/udp
     volumes:
-      - ./path/to/config/mumble-server:/path/to/config/mumble-server
-      - ./data/:/data
-volumes:
-  data: {}
+      - /etc/localtime:/etc/localtime:ro
+      - ./cert:/opt/murmur/cert
+      - ./config:/opt/murmur/config
+      - ./data:/opt/murmur/data
+      - ./log:/opt/murmur/log
+    environment:
+      - TZ=UTC
